@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-fill: #070380;
+    --color-empty: #aaa;
+    --font-size: 2.4rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    /* to remove any visible scrollbars */
+
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    margin-bottom: 4.8rem;
+    width: 75rem;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.progress-container::before {
+    content: '';
+    display: block;
+
+    background-color: var(--color-empty);
+    height: 0.4rem;
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    transition: all 0.4s ease;
+}
+
+.progress {
+    background-color: var(--color-fill);
+    height: 0.4rem;
+    width: 0%;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    transition: all 0.6s ease;
+}
+
+.circle {
+    background-color: #fff;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-empty);
+
+    color: var(--color-empty);
+    font-size: var(--font-size);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.4s ease;
+}
+
+.circle.active {
+    border-color: var(--color-fill);
+    color: var(--color-fill);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.btn {
+    background-color: var(--color-fill);
+    border: 0;
+    border-radius: 10rem;
+    cursor: pointer;
+    padding: 1.2rem 4.8rem;
+
+    color: #fff;
+    font-family: inherit;
+    font-size: var(--font-size);
+
+    transition: all 0.1s;
+}
+
+.btn:active {
+    transform: scale(1.05);
+}
+.btn:disabled {
+    background-color: var(--color-empty);
+    cursor: not-allowed;
+}
