@@ -40,10 +40,6 @@ body {
     transition: width 0.4s ease-out;
 }
 
-.search-input:focus {
-    outline: none;
-}
-
 .search-btn {
     cursor: pointer;
     background-color: #eee;
@@ -57,6 +53,11 @@ body {
     left: 0;
 
     transition: transform 0.4s ease-out;
+}
+
+.search-input:focus,
+.search-btn:focus {
+    outline: none;
 }
 
 .search-container.active .search-input {
