@@ -10,8 +10,12 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-
-    background-color: rgba(10, 24, 40, 0.9);
+    background-image: linear-gradient(
+        to bottom right,
+        #40e0d09c,
+        #ff8c007b,
+        #ff00808d
+    );
     height: 100vh;
     overflow: hidden;
 
@@ -19,6 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10rem;
 }
 
 .search-container {
@@ -66,4 +71,32 @@ body {
 
 .search-container.active .search-btn {
     transform: translateX(15rem);
+}
+
+.button {
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+
+    background-color: #eee;
+    border: none;
+    width: 30rem;
+    height: 5rem;
+    border-radius: 5rem;
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+    transform: translateY(-1px);
+    /* w.r.to the initial state, i.e., the link state */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
