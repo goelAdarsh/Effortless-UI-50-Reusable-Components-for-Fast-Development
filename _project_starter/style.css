@@ -4,11 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     height: 100vh;
     overflow: hidden;
-    /* to remove any visible scrollbars */
 
     display: flex;
     flex-direction: column;
